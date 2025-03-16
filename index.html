@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upgraded Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Quiz Master!</h1>
+    
+    <!-- Progress bar -->
+    <div class="progress-container">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <!-- Timer -->
+    <div class="timer" id="timer">10</div>
+
+    <div class="quiz-box active" id="quiz">
+      <div class="question fade-in" id="question">Question text</div>
+      <div class="options">
+        <button class="option-btn" onclick="selectOption(0)" id="btn0">Option 1</button>
+        <button class="option-btn" onclick="selectOption(1)" id="btn1">Option 2</button>
+        <button class="option-btn" onclick="selectOption(2)" id="btn2">Option 3</button>
+        <button class="option-btn" onclick="selectOption(3)" id="btn3">Option 4</button>
+      </div>
+      <button class="next-btn" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <div class="result-box" id="result">
+      <h2>Quiz Completed!</h2>
+      <p id="score">Your Score: 0</p>
+      <button class="restart-btn" onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
